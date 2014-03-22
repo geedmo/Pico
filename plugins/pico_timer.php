@@ -15,98 +15,12 @@ class Pico_Timer {
 	{
 			$this->start = microtime(true);
 	}
-
-	public function config_loaded(&$settings)
-	{
-		
-	}
-	
-	public function request_url(&$url)
-	{
-		
-	}
-	
-	public function before_load_content(&$file)
-	{
-		
-	}
-	
-	public function after_load_content(&$file, &$content)
-	{
-		
-	}
-	
-	public function before_404_load_content(&$file)
-	{
-		
-	}
-	
-	public function after_404_load_content(&$file, &$content)
-	{
-		
-	}
-	
-	public function before_read_file_meta(&$headers)
-	{
-		
-	}
-	
-	public function file_meta(&$meta)
-	{
-		
-	}
-
-	public function before_parse_content(&$content)
-	{
-		
-	}
-	
-	public function after_parse_content(&$content)
-	{
-		
-	}
-	
-	public function get_page_data(&$data, $page_meta)
-	{
-		
-	}
 	
 	public function get_pages(&$pages, &$current_page, &$prev_page, &$next_page)
 	{
 		$this->pages = &$pages;
 	}
-	
-	public function before_twig_register()
-	{
-		
-	}
-	
-	public function before_render(&$twig_vars, &$twig, &$template)
-	{
-		
-	}
 
-	// http://ar2.php.net/time#108581
-	function time_elapsed($secs){
-	  $bit = array(
-	      'y' => $secs / 31556926 % 12,
-	      'w' => $secs / 604800 % 52,
-	      'd' => $secs / 86400 % 7,
-	      'h' => $secs / 3600 % 24,
-	      'm' => $secs / 60 % 60,
-	      's' => $secs % 60,
-	      'ms' => $secs % 1000
-	      );
-	  
-	  $ret = array();
-	  foreach($bit as $k => $v)
-	      if($v > 0) 
-	      	$ret[] = $v . $k;
-	      
-	  return join(' ', $ret);
-	}
-	  
-	
 	public function after_render(&$output)
 	{
 			return;  // uncomment to disable
