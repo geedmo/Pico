@@ -30,7 +30,7 @@ class Pico_Timer {
 
 			$f_start = date('h:i:s', $this->start);
 			$f_end = date('h:i:s', $this->end);
-			$f_diff = $this->end - $this->start;
+
 			$count = count($this->pages);
 
 			$output = "<!doctype html>
@@ -45,7 +45,7 @@ class Pico_Timer {
 	<p>Processed: $count</p>
 	<hr>
 	<h2>Elapsed</h2>
-	<p>$f_diff seconds</p>
+	<p>$diff seconds</p>
 </body>
 </html>
 ";
